@@ -1,4 +1,4 @@
-const featuredItems = [
+const Data = [
   {
     name: "ELLERY X M'O CAPSULE",
     description: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
@@ -22,4 +22,4 @@ const featuredItems = [
   },
 ];
 
-export default featuredItems;
+export default Data;
