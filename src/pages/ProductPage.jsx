@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Data from "../data/Data";
+import "../css/product.min.css";
 
 const Product = () => {
   const [quantity, setQuantity] = useState(1);

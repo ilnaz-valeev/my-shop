@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Data from "../data/Data";
+import "../css/style.min.css";
 
 const Chief = () => {
   
