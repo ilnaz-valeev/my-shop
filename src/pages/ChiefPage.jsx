@@ -7,7 +7,7 @@ import "../css/style.min.css";
 const Chief = () => {
   return (
     <div>
-      <Header />
+     
 
       <section className="promo">
         <div className="promo__img">
@@ -33,7 +33,7 @@ const Chief = () => {
         <button className="browse-all__button">Browse All Products</button>
       </div>
 
-      <Footer />
+     
     </div>
   );
 };

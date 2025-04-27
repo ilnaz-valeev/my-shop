@@ -28,7 +28,7 @@ const Cart = () => {
 
   return (
     <div>
-      <Header />
+      
 
       <section className="head center">
         <h2 className="head__heading">SHOPPING CART</h2>
@@ -134,7 +134,7 @@ const Cart = () => {
         </section>
       </section>
 
-      <Footer />
+      
     </div>
   );
 };

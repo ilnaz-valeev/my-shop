@@ -9,7 +9,7 @@ const Product = () => {
 
   return (
     <div>
-      <Header />
+      
 
       <section className="head center">
         <h2 className="head__heading">NEW ARRIVALS</h2>
@@ -113,7 +113,7 @@ const Product = () => {
 
       <Data />
 
-      <Footer />
+      
     </div>
   );
 };

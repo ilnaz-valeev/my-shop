@@ -29,7 +29,7 @@ const Catalog = () => {
 
   return (
     <div>
-      <Header />
+      
       <section className="head center">
         <h2 className="head__heading">NEW ARRIVALS</h2>
         <div className="breadcrumb">
@@ -158,7 +158,7 @@ const Catalog = () => {
         ))}
       </div>
 
-      <Footer />
+     
     </div>
   );
 };

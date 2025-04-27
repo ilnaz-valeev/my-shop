@@ -6,7 +6,7 @@ import "../css/registration.min.css";
 const RegistrationPage = () => {
   return (
     <>
-      <Header/>
+      
 
       <section className="head center">
         <h2 className="head__heading">REGISTRATION</h2>
@@ -176,7 +176,7 @@ const RegistrationPage = () => {
         </section>
       </section>
 
-     <Footer/>
+     
     </>
   );
 };
