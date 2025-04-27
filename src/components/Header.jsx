@@ -1,3 +1,5 @@
+import React from "react";
+
 const Header = () => (
   <div className="top">
     <header className="header center">

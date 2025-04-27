@@ -6,7 +6,7 @@ import ProductPage from "./pages/ProductPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import "./css/style.scss";
+import "./App.css";
 
 function App() {
   return (

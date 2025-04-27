@@ -5,8 +5,6 @@ import Data from "../data/Data";
 import "../css/style.min.css";
 
 const Chief = () => {
-  
-
   return (
     <div>
       <Header />

@@ -7,11 +7,6 @@ import "../css/product.min.css";
 const Product = () => {
   const [quantity, setQuantity] = useState(1);
 
-  
-
-
-
-
   return (
     <div>
       <Header />
@@ -116,7 +111,7 @@ const Product = () => {
         </button>
       </section>
 
-      <Data/>
+      <Data />
 
       <Footer />
     </div>
