@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="email__sending">
         <div className="email__sending__face">
           <img
-            src="img/facebr.png"
+            src="/img/ava.png"
             alt="#"
             className="email__sending__face__img"
           />

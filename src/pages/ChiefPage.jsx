@@ -7,8 +7,6 @@ import "../css/style.min.css";
 const Chief = () => {
   return (
     <div>
-     
-
       <section className="promo">
         <div className="promo__img">
           <img src="img/menh.png" alt="photo promo" />
@@ -24,7 +22,20 @@ const Chief = () => {
       </section>
 
       <section className="sale center">
-        {/* Sale items would be inserted here */}
+        
+        {Data.map((item, index) => (
+          <div className="sale__item" key={index}>
+            <img src={item.image} alt={`sale image ${index}`} />
+            <div className="sale__content">
+              <p className="sale__text">{item.price}</p>
+              <h3 className="sale__heading">{item.name}</h3>
+              <p>{item.description}</p>
+              <a href={item.link} className="sale__link">
+                View Product
+              </a>
+            </div>
+          </div>
+        ))}
       </section>
 
       <Data />
@@ -32,8 +43,6 @@ const Chief = () => {
       <div className="browse-all">
         <button className="browse-all__button">Browse All Products</button>
       </div>
-
-     
     </div>
   );
 };
