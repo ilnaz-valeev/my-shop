@@ -4,7 +4,7 @@ const Data = [
     description:
       "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     price: "$52.00",
-    image: "img/1mb.jpg",
+    image: "./img/1mb.jpg",
     link: "product.html",
     sizes: ["S", "M", "L"],
   },
@@ -31,7 +31,7 @@ const Data = [
     description:
       "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     price: "$52.00",
-    image: "img/3mb.png",
+    image: "img/4mb.png",
     link: "product.html",
     sizes: ["s"], 
   },
@@ -40,7 +40,7 @@ const Data = [
     description:
       "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     price: "$52.00",
-    image: "img/3mb.png",
+    image: "img/5mb.png",
     link: "product.html",
     sizes: ["L"], 
   },
@@ -49,7 +49,7 @@ const Data = [
     description:
       "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     price: "$52.00",
-    image: "img/3mb.png",
+    image: "img/6mb.png",
     link: "product.html",
     sizes: ["XS"], 
   },
