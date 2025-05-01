@@ -18,8 +18,7 @@ function App() {
         <Route path="/catalog" element={<CatalogPage />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/registration" element={<RegistrationPage />} />
-        <Route path="/chief" element={<ChiefPage />} />
-        <Route path="/" element={<CatalogPage />} />
+        <Route path="/" element={<ChiefPage />} />
       </Routes>
       <Footer />
     </Router>

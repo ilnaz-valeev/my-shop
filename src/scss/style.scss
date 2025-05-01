@@ -106,7 +106,9 @@ summary::-webkit-details-marker {
     line-height: 17px;
     color: #6F6E6E;
     
- 
+    &:hover {
+      
+    }
   }
 
   &__title {
@@ -518,7 +520,7 @@ summary::-webkit-details-marker {
 
 .email__sending {
   position: relative;
-  background-image: url("./img/backgroundPhot.png");
+  background-image: url("/img/backgroundPhot.png");
   background-size: cover;
   height: 448px;
   display: flex;
@@ -722,7 +724,8 @@ summary::-webkit-details-marker {
 
   .sale {
     grid-template-columns: repeat(1, 1fr);
- 
+    &__item_big {
+    }
     &__item_big_width__img {
       height: 111px;
       width: auto;

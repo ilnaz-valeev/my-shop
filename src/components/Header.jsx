@@ -1,12 +1,12 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Header = () => (
   <div className="top">
     <header className="header center">
       <div className="header__left">
-        <a href="index.html">
+        <Link to='/'>
           <img src="./img/logfos.svg" alt="logo" />
-        </a>
+        </Link>
         <a href="#">
           {/* <img src="img/2h.svg" alt="search" /> */}
           <svg
@@ -39,7 +39,7 @@ const Header = () => (
             />
           </svg>
         </label>
-        <a className="header__link-site" href="registration.html">
+        <Link to='/registration' className="header__link-site" >
           {/* <img src="img/4h.svg" alt="reg" /> */}
           <svg
             width="29"
@@ -53,8 +53,8 @@ const Header = () => (
               fill="#E8E8E8"
             />
           </svg>
-        </a>
-        <a className="header__link-site" href="cart.html">
+        </Link>
+        <Link className="header__link-site" to="/cart">
           {/* <img src="img/5h.svg" alt="cart" /> */}
           <svg
             width="32"
@@ -68,7 +68,7 @@ const Header = () => (
               fill="#E8E8E8"
             />
           </svg>
-        </a>
+        </Link>
       </nav>
     </header>
   </div>

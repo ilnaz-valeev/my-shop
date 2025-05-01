@@ -22,23 +22,62 @@ const Chief = () => {
       </section>
 
       <section className="sale center">
-        
+        <div className="sale__item">
+          <img src="img/1mn.png" alt="sale image" />
+          <div className="sale__content">
+            <p className="sale__text">30% OFF</p>
+            <h3 className="sale__heading">FOR WOMEN</h3>
+          </div>
+        </div>
+        <div className="sale__item">
+          <img src="img/2mn.png" alt="sale image" />
+          <div className="sale__content">
+            <p className="sale__text">HOT DEAL</p>
+            <h3 className="sale__heading">FOR MEN</h3>
+          </div>
+        </div>
+        <div className="sale__item">
+          <img src="img/3mn.png" alt="sale image" />
+          <div className="sale__content">
+            <p className="sale__text">NEW ARRIVALS</p>
+            <h3 className="sale__heading">FOR KIDS</h3>
+          </div>
+        </div>
+        <div className="sale__item sale__item_big">
+          <img
+            src="img/4mn.png"
+            alt="sale image"
+            className="sale__item_big_width__img"
+          />
+          <div className="sale__content">
+            <p className="sale__text">LUXIROUS & TRENDY</p>
+            <h3 className="sale__heading">ACCESORIES</h3>
+          </div>
+        </div>
+      </section>
+      <h2 className="product-box__heading">Fetured Items</h2>
+      <p className="product-box__text">
+        Shop for items based on what we featured in this week
+      </p>
+      <section className="sale center">
         {Data.map((item, index) => (
-          <div className="sale__item" key={index}>
-            <img src={item.image} alt={`sale image ${index}`} />
-            <div className="sale__content">
-              <p className="sale__text">{item.price}</p>
-              <h3 className="sale__heading">{item.name}</h3>
-              <p>{item.description}</p>
-              <a href={item.link} className="sale__link">
-                View Product
+          <div className="product" key={index}>
+            <img
+              src={item.image}
+              alt={`product__img ${index}`}
+              className="product__img product__content__girl"
+            />
+            <div className="product__content ">
+              <a className="product__heading">{item.name}</a>
+              <p className="product__text">{item.description}</p>
+              <p className="product__price">{item.price}</p>
+              <a href={item.link} className="product__add">
+                Add to Cart
               </a>
             </div>
           </div>
         ))}
       </section>
-
-      <Data />
 
       <div className="browse-all">
         <button className="browse-all__button">Browse All Products</button>
