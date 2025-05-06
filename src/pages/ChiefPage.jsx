@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Advantages from "../components/adavantages";
 import Data from "../data/Data";
 import "../css/style.min.css";
+import { Link } from "react-router-dom";
 
 const Chief = () => {
   return (
@@ -71,9 +71,9 @@ const Chief = () => {
               <a className="product__heading">{item.name}</a>
               <p className="product__text">{item.description}</p>
               <p className="product__price">{item.price}</p>
-              <a href={item.link} className="product__add">
+              <Link to="/product" className="product__add">
                 Add to Cart
-              </a>
+              </Link>
             </div>
           </div>
         ))}
@@ -82,6 +82,7 @@ const Chief = () => {
       <div className="browse-all">
         <button className="browse-all__button">Browse All Products</button>
       </div>
+      
     </div>
   );
 };

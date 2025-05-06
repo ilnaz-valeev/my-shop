@@ -76,7 +76,7 @@ summary::-webkit-details-marker {
   }
 }
 
-.content {
+.content__reg {
   display: flex;
   justify-content: center;
   margin-top: 64px;
@@ -162,7 +162,7 @@ summary::-webkit-details-marker {
     }
   }
 
-  &__rigth {
+  .content__rigth {
     font-weight: 300;
     font-size: 24px;
     color: #000;

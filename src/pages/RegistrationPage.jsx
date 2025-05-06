@@ -1,25 +1,22 @@
 import React from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+
 import "../css/registration.min.css";
 
 const RegistrationPage = () => {
   return (
     <>
-      
-
       <section className="head center">
         <h2 className="head__heading">REGISTRATION</h2>
       </section>
 
-      <section className="content">
-        <div className="content__left">
-          <h3 className="content__left__header__name">Your Name</h3>
+      <section className="content__reg">
+        <div className="content__reg__left">
+          <h3 className="content__reg__left__header__name">Your Name</h3>
           <input
             type="text"
             id="First Name"
             name="First Name"
-            className="content__left__input"
+            className="content__reg__left__input"
             placeholder="First Name"
             required
           />
@@ -28,7 +25,7 @@ const RegistrationPage = () => {
             type="text"
             id="Last Name"
             name="Last Name"
-            className="content__left__input"
+            className="content__reg__left__input"
             placeholder="Last Name"
             required
           />
@@ -43,13 +40,13 @@ const RegistrationPage = () => {
             </label>
           </div>
 
-          <h3 className="content__left__header__name">Login details</h3>
+          <h3 className="content__reg__left__header__name">Login details</h3>
 
           <input
             type="email"
             id="Email"
             name="Email"
-            className="content__left__input"
+            className="content__reg__left__input"
             placeholder="Email"
             required
           />
@@ -58,12 +55,12 @@ const RegistrationPage = () => {
             type="password"
             id="Password"
             name="Password"
-            className="content__left__input"
+            className="content__reg__left__input"
             placeholder="Password"
             required
           />
 
-          <p className="content__left__text">
+          <p className="content__reg__left__text">
             Please use 8 or more characters, with at least 1 number and a
             mixture of uppercase and lowercase letters
           </p>
@@ -87,14 +84,14 @@ const RegistrationPage = () => {
           </button>
         </div>
 
-        <section className="content__right">
-          <p className="content__right__header">LOYALTY HAS ITS PERKS</p>
-          <p className="content__right__under__header">
+        <section className="content__rigth">
+          <p className="content__rigth__header">LOYALTY HAS ITS PERKS</p>
+          <p className="content__rigth__under__header">
             Get in on the loyalty program where you can earn points and unlock
             serious perks. Starting with these as soon as you join:
           </p>
 
-          <div className="perk-item">
+          <span>
             <svg
               width="20"
               height="16"
@@ -108,9 +105,9 @@ const RegistrationPage = () => {
               />
             </svg>
             <p>15% off welcome offer</p>
-          </div>
+          </span>
 
-          <div className="perk-item">
+          <span>
             <svg
               width="20"
               height="16"
@@ -124,9 +121,9 @@ const RegistrationPage = () => {
               />
             </svg>
             <p>Free shipping, returns and exchanges on all orders</p>
-          </div>
+          </span>
 
-          <div className="perk-item">
+          <span>
             <svg
               width="20"
               height="16"
@@ -140,9 +137,9 @@ const RegistrationPage = () => {
               />
             </svg>
             <p>$10 off a purchase on your birthday</p>
-          </div>
+          </span>
 
-          <div className="perk-item">
+          <span>
             <svg
               width="20"
               height="16"
@@ -156,9 +153,9 @@ const RegistrationPage = () => {
               />
             </svg>
             <p>Early access to products</p>
-          </div>
+          </span>
 
-          <div className="perk-item">
+          <span>
             <svg
               width="20"
               height="16"
@@ -172,11 +169,9 @@ const RegistrationPage = () => {
               />
             </svg>
             <p>Exclusive offers & rewards</p>
-          </div>
+          </span>
         </section>
       </section>
-
-     
     </>
   );
 };

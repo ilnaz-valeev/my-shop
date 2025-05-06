@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import { Link } from "react-router-dom";
 import Data from "../data/Data"; // Импортируем массив данных
 import "../css/catalog.min.css";
 
@@ -29,7 +28,6 @@ const Catalog = () => {
 
   return (
     <div>
-      
       <section className="head center">
         <h2 className="head__heading">NEW ARRIVALS</h2>
         <div className="breadcrumb">
@@ -50,6 +48,8 @@ const Catalog = () => {
           </div>
         </div>
       </section>
+
+      
 
       <div className="filter-sort center">
         <div className="filter-box">
@@ -84,6 +84,38 @@ const Catalog = () => {
                   <a className="filter__link">Sweaters & Knits</a>
                   <a className="filter__link">T-Shirts</a>
                   <a className="filter__link">Tanks</a>
+                </div>
+              </details>
+              <details class="filter__category">
+                <summary class="filter__category-summary">BRAND</summary>
+                <div class="filter__box">
+                  <a class="filter__link">Accessories</a>
+                  <a class="filter__link">Bags</a>
+                  <a class="filter__link">Denim</a>
+                  <a class="filter__link">Hoodies & Sweatshirts</a>
+                  <a class="filter__link">Jackets & Coats</a>
+                  <a class="filter__link">Polos</a>
+                  <a class="filter__link">Shirts</a>
+                  <a class="filter__link">Shoes</a>
+                  <a class="filter__link">Sweaters & Knits</a>
+                  <a class="filter__link">T-Shirts</a>
+                  <a class="filter__link">Tanks</a>
+                </div>
+              </details>
+              <details class="filter__category">
+                <summary class="filter__category-summary">DESIGN</summary>
+                <div class="filter__box">
+                  <a class="filter__link">Accessories</a>
+                  <a class="filter__link">Bags</a>
+                  <a class="filter__link">Denim</a>
+                  <a class="filter__link">Hoodies & Sweatshirts</a>
+                  <a class="filter__link">Jackets & Coats</a>
+                  <a class="filter__link">Polos</a>
+                  <a class="filter__link">Shirts</a>
+                  <a class="filter__link">Shoes</a>
+                  <a class="filter__link">Sweaters & Knits</a>
+                  <a class="filter__link">T-Shirts</a>
+                  <a class="filter__link">Tanks</a>
                 </div>
               </details>
             </div>
@@ -146,20 +178,74 @@ const Catalog = () => {
       </div>
 
       {/* Фильтрация и отображение данных */}
-      <div className="product-list">
-        {Data.filter(filterBySize).map((product, index) => (
-          <div key={index} className="product-card">
-            <img src={product.image} alt={product.name} />
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <span>{product.price}</span>
-            <a href={product.link}>View Product</a>
+      <section className="sale center">
+        {Data.map((item, index) => (
+          <div className="product" key={index}>
+            <img
+              src={item.image}
+              alt={`product__img ${index}`}
+              className="product__img product__content__girl"
+            />
+            <div className="product__content ">
+              <a className="product__heading">{item.name}</a>
+              <p className="product__text">{item.description}</p>
+              <p className="product__price">{item.price}</p>
+              <Link to="/product" className="product__add">
+                Add to Cart
+              </Link>
+            </div>
           </div>
         ))}
-      </div>
-      
+      </section>
 
-     
+      <div class="pagination" role="navigation" aria-label="Pagination">
+        <button
+          class="pagination__arrow pagination__arrow--prev"
+          aria-label="Previous page"
+        >
+          <svg
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.99512 2L2.99512 7L7.99512 12L6.99512 14L-0.00488281 7L6.99512 0L7.99512 2Z"
+              fill="black"
+            />
+          </svg>
+        </button>
+
+        <div class="pagination__numbers">
+          <span class="pagination__numb">1</span>
+          <span class="pagination__numb">2</span>
+          <span class="pagination__numb">3</span>
+          <span class="pagination__numb">4</span>
+          <span class="pagination__numb">5</span>
+          <span class="pagination__numb">6</span>
+          <span class="pagination__ellipsis">...</span>
+          <span class="pagination__numb end__numb">20</span>
+        </div>
+
+        <button
+          class="pagination__arrow pagination__arrow--next"
+          aria-label="Next page"
+        >
+          <svg
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M-0.00500488 12L4.995 7L-0.00500488 2L0.994995 0L7.995 7L0.994995 14L-0.00500488 12Z"
+              fill="black"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   );
 };

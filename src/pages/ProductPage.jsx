@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+
 import Data from "../data/Data";
 import "../css/product.min.css";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   const [quantity, setQuantity] = useState(1);
 
   return (
     <div>
-      
-
       <section className="head center">
         <h2 className="head__heading">NEW ARRIVALS</h2>
         <div className="breadcrumb">
@@ -80,30 +78,30 @@ const Product = () => {
         <div className="sort">
           <details className="sort__details">
             <summary className="sort__summary">
-              CHOOSE COLOR <img src="img/arrowu.svg" alt="#" />
+              CHOOSE COLOR <img src="/img/arrowu.svg" alt="#" />
             </summary>
           </details>
           <details className="sort__details">
             <summary className="sort__summary">
-              CHOOSE SIZE <img src="img/arrowu.svg" alt="#" />
+              CHOOSE SIZE <img src="/img/arrowu.svg" alt="#" />
             </summary>
           </details>
           <details className="sort__details">
             <summary className="sort__summary">
-              QUANTITY <img src="img/arrowu.svg" alt="#" />
+              QUANTITY <img src="/img/arrowu.svg" alt="#" />
             </summary>
             <input
               type="number"
               min="1"
-              value={quantity}
-              onChange={handleQuantityChange}
+              //   value={quantity}
+              //   onChange={handleQuantityChange}
               className="quantity__input"
             />
           </details>
         </div>
         <button className="button__basket">
           <img
-            src="img/basket.svg"
+            src="/img/basket.svg"
             alt="cart"
             className="button__basket__img"
           />
@@ -111,9 +109,25 @@ const Product = () => {
         </button>
       </section>
 
-      <Data />
-
-      
+      <section className="sale center" >
+        {Data.slice(0,3).map((item, index) => (
+          <div className="product" key={index}>
+            <img
+              src={item.image}
+              alt={`product__img ${index}`}
+              className="product__img product__content__girl"
+            />
+            <div className="product__content ">
+              <a className="product__heading">{item.name}</a>
+              <p className="product__text">{item.description}</p>
+              <p className="product__price">{item.price}</p>
+              <Link to="/product" className="product__add">
+                Add to Cart
+              </Link>
+            </div>
+          </div>
+        ))}
+      </section>
     </div>
   );
 };
