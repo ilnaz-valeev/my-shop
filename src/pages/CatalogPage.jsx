@@ -26,6 +26,9 @@ const Catalog = () => {
     return productSizes.some((size) => selectedSizes[size]);
   };
 
+  // Фильтруем данные товаров в соответствии с выбранными размерами
+  const filteredData = Data.filter(filterBySize);
+
   return (
     <div>
       <section className="head center">
@@ -48,8 +51,6 @@ const Catalog = () => {
           </div>
         </div>
       </section>
-
-      
 
       <div className="filter-sort center">
         <div className="filter-box">
@@ -86,36 +87,36 @@ const Catalog = () => {
                   <a className="filter__link">Tanks</a>
                 </div>
               </details>
-              <details class="filter__category">
-                <summary class="filter__category-summary">BRAND</summary>
-                <div class="filter__box">
-                  <a class="filter__link">Accessories</a>
-                  <a class="filter__link">Bags</a>
-                  <a class="filter__link">Denim</a>
-                  <a class="filter__link">Hoodies & Sweatshirts</a>
-                  <a class="filter__link">Jackets & Coats</a>
-                  <a class="filter__link">Polos</a>
-                  <a class="filter__link">Shirts</a>
-                  <a class="filter__link">Shoes</a>
-                  <a class="filter__link">Sweaters & Knits</a>
-                  <a class="filter__link">T-Shirts</a>
-                  <a class="filter__link">Tanks</a>
+              <details className="filter__category">
+                <summary className="filter__category-summary">BRAND</summary>
+                <div className="filter__box">
+                  <a className="filter__link">Accessories</a>
+                  <a className="filter__link">Bags</a>
+                  <a className="filter__link">Denim</a>
+                  <a className="filter__link">Hoodies & Sweatshirts</a>
+                  <a className="filter__link">Jackets & Coats</a>
+                  <a className="filter__link">Polos</a>
+                  <a className="filter__link">Shirts</a>
+                  <a className="filter__link">Shoes</a>
+                  <a className="filter__link">Sweaters & Knits</a>
+                  <a className="filter__link">T-Shirts</a>
+                  <a className="filter__link">Tanks</a>
                 </div>
               </details>
-              <details class="filter__category">
-                <summary class="filter__category-summary">DESIGN</summary>
-                <div class="filter__box">
-                  <a class="filter__link">Accessories</a>
-                  <a class="filter__link">Bags</a>
-                  <a class="filter__link">Denim</a>
-                  <a class="filter__link">Hoodies & Sweatshirts</a>
-                  <a class="filter__link">Jackets & Coats</a>
-                  <a class="filter__link">Polos</a>
-                  <a class="filter__link">Shirts</a>
-                  <a class="filter__link">Shoes</a>
-                  <a class="filter__link">Sweaters & Knits</a>
-                  <a class="filter__link">T-Shirts</a>
-                  <a class="filter__link">Tanks</a>
+              <details className="filter__category">
+                <summary className="filter__category-summary">DESIGN</summary>
+                <div className="filter__box">
+                  <a className="filter__link">Accessories</a>
+                  <a className="filter__link">Bags</a>
+                  <a className="filter__link">Denim</a>
+                  <a className="filter__link">Hoodies & Sweatshirts</a>
+                  <a className="filter__link">Jackets & Coats</a>
+                  <a className="filter__link">Polos</a>
+                  <a className="filter__link">Shirts</a>
+                  <a className="filter__link">Shoes</a>
+                  <a className="filter__link">Sweaters & Knits</a>
+                  <a className="filter__link">T-Shirts</a>
+                  <a className="filter__link">Tanks</a>
                 </div>
               </details>
             </div>
@@ -179,14 +180,14 @@ const Catalog = () => {
 
       {/* Фильтрация и отображение данных */}
       <section className="sale center">
-        {Data.map((item, index) => (
+        {filteredData.map((item, index) => (
           <div className="product" key={index}>
             <img
               src={item.image}
               alt={`product__img ${index}`}
               className="product__img product__content__girl"
             />
-            <div className="product__content ">
+            <div className="product__content">
               <a className="product__heading">{item.name}</a>
               <p className="product__text">{item.description}</p>
               <p className="product__price">{item.price}</p>
@@ -197,55 +198,6 @@ const Catalog = () => {
           </div>
         ))}
       </section>
-
-      <div class="pagination" role="navigation" aria-label="Pagination">
-        <button
-          class="pagination__arrow pagination__arrow--prev"
-          aria-label="Previous page"
-        >
-          <svg
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.99512 2L2.99512 7L7.99512 12L6.99512 14L-0.00488281 7L6.99512 0L7.99512 2Z"
-              fill="black"
-            />
-          </svg>
-        </button>
-
-        <div class="pagination__numbers">
-          <span class="pagination__numb">1</span>
-          <span class="pagination__numb">2</span>
-          <span class="pagination__numb">3</span>
-          <span class="pagination__numb">4</span>
-          <span class="pagination__numb">5</span>
-          <span class="pagination__numb">6</span>
-          <span class="pagination__ellipsis">...</span>
-          <span class="pagination__numb end__numb">20</span>
-        </div>
-
-        <button
-          class="pagination__arrow pagination__arrow--next"
-          aria-label="Next page"
-        >
-          <svg
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M-0.00500488 12L4.995 7L-0.00500488 2L0.994995 0L7.995 7L0.994995 14L-0.00500488 12Z"
-              fill="black"
-            />
-          </svg>
-        </button>
-      </div>
     </div>
   );
 };
