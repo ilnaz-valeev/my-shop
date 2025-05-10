@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Data from "../data/Data"; // Импортируем массив данных
 import "../css/catalog.min.css";
+import Card from '../components/Card'
 
 const Catalog = () => {
   // Состояние для выбранных размеров
@@ -181,21 +182,7 @@ const Catalog = () => {
       {/* Фильтрация и отображение данных */}
       <section className="sale center">
         {filteredData.map((item, index) => (
-          <div className="product" key={index}>
-            <img
-              src={item.image}
-              alt={`product__img ${index}`}
-              className="product__img product__content__girl"
-            />
-            <div className="product__content">
-              <a className="product__heading">{item.name}</a>
-              <p className="product__text">{item.description}</p>
-              <p className="product__price">{item.price}</p>
-              <Link to="/product" className="product__add">
-                Add to Cart
-              </Link>
-            </div>
-          </div>
+          <Card item={item} index={index} />
         ))}
       </section>
     </div>

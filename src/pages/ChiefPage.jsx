@@ -3,6 +3,7 @@ import Advantages from "../components/adavantages";
 import Data from "../data/Data";
 import "../css/style.min.css";
 import { Link } from "react-router-dom";
+import Card from "../components/Card"
 
 const Chief = () => {
   return (
@@ -60,29 +61,15 @@ const Chief = () => {
         Shop for items based on what we featured in this week
       </p>
       <section className="sale center">
-        {Data.map((item, index) => (
-          <div className="product" key={index}>
-            <img
-              src={item.image}
-              alt={`product__img ${index}`}
-              className="product__img product__content__girl"
-            />
-            <div className="product__content ">
-              <a className="product__heading">{item.name}</a>
-              <p className="product__text">{item.description}</p>
-              <p className="product__price">{item.price}</p>
-              <Link to="/product" className="product__add">
-                Add to Cart
-              </Link>
-            </div>
-          </div>
+        {Data.slice(0,6).map((item, index) => (
+          <Card item={item}index={index}/>
         ))}
       </section>
 
       <div className="browse-all">
         <button className="browse-all__button">Browse All Products</button>
       </div>
-      
+      <Advantages/>
     </div>
   );
 };
